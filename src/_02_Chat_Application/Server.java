@@ -1,4 +1,4 @@
-package _00_Click_Chat.networking;
+package _02_Chat_Application;
 
 import java.io.EOFException;
 import java.io.IOException;
@@ -75,7 +75,8 @@ public class Server {
 	public void sendMes(String mes) {
 		try {
 			if (os != null) {
-				os.writeObject("CLICK SENT FROM CLIENT");
+				//os.writeObject("Server sent a Message!");
+				os.writeObject(mes);
 				os.flush();
 			}
 		} catch (IOException e) {
